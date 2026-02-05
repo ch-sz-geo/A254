@@ -1,5 +1,5 @@
 // Hier den Titel eingeben
-:title: <Hier_Themenname_eingeben> (<Hier_Temennummer_eingeben>)
+:title: Grundwasseraustritte und -fassungen (A254)
 :subtitle: Modelldokumentation
 ifdef::backend-pdf[]
 = {title}
@@ -34,14 +34,6 @@ image:{myImage}[logo kt sz rgb]
 
 = {title}
 [.subtitle]#{subtitle}# +
-
-//****
-
-//* https://ch-sz-geo.github.io/A000_entrypage/[zur Startseite] +
-//* https://amandawetter.github.io/A000_Rebuild/[Übersicht <Hier_Temennummer_eingeben> Dokumentation] +
-//* https://amandawetter.github.io/A000_Rebuild/docs/modelldokumentation.pdf[Dokumentation als PDF] +
-
-//****
 
 endif::[]
 
