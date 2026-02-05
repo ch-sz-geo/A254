@@ -6,12 +6,12 @@
 ====
 [cols="1, 3"]
 |===
-|Erstelldatum | 2024-01-01
+|Erstelldatum | 2026-02-05
 |letzte Änderung | {docdate}
-| Themen-Nummer | Annn
-| ID nach kGeoiV | --- 
-| Beteiligte | Person 1 (Kürzel 1), Amt 1 + 
-Person 2 (Kürzel 2), Amt 2
+| Themen-Nummer | A254
+| ID nach kGeoiV | 141 
+| Beteiligte | Zlatko Mrnjec (ZM), Amt für Umwelt und Energie + 
+Kuno Epper (Kep), Amt für Geoinformation
 | Status a| - [ ] Entwurf 
 - [ ] bereit für Vernehmlassung
 - [x] gültig
