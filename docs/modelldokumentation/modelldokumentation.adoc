@@ -28,7 +28,7 @@ ifndef::env-github[:toc: left]
 // Todo Header Styling und Environment ändern auf Doc. Header auf der Webseite muss auf andere Weise integriert werden
 
 ifndef::env-github[]
-:myImage: https://ch-sz-geo.github.io/A000_defaultDesigne/themes/logo_kt_sz_rgb.jpg
+:myImage: https://ch-sz-geo.github.io/A000_defaultDesign/themes/logo_kt_sz_rgb.jpg
 [.img-logo]
 image:{myImage}[logo kt sz rgb]
 
