@@ -7,66 +7,52 @@
 * Quellmodell: Das hier beschriebene Datenmodell
 * Zielmodell: http://models.geo.admin.ch/BAFU/todo[<Modellname> (Version: 2023-03-20)]
 
-=== Transformation ins Transfermodell ÖREB-Kataster
-* Quellmodell: Das hier beschriebene Datenmodell
-* Zielmodell: https://models.geo.admin.ch/V_D/OeREB/OeREBKRMtrsfr_V2_0.ili[OeREBKRMtrsfr_V2_0 (Version: 2021-04-14)]
-
-==== Klasse `+DarstellungsDienst+`
+==== Klasse `+Quelle+`
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| `+ch.sz.a094b.oereb.wald.statische_waldgrenze.linie+`
-| `+VerweisWMS+`
-|===
-
-==== Klasse `+Eigentumsbeschraenkung+`
-[cols=2*,options="header"]
-|===
-| Quellattribut | Zielattribut
-| Der Wert für `+Rechtsstatus+` wird regelbasiert abgeleitet (siehe unten) | `+Rechtsstatus+`
-| Datum, an dem die Publikation im ÖREB-Katastersystem erfolgt; wird durch den Publikationsprozess gesetzt m| publiziertAb
-| (aktuell nicht verwendet und daher leer) m| publiziertBis
-|===
-
-Regeln für die Ableitung des Wertes für `+Rechtsstatus+`:
-|===
-h| Regel h| Rechtsstatus
-a| Der Wert von `+Waldgrenze.Begruendungsverfahren+` muss gesetzt sein und der Wert von `+Waldgrenze.Aufhebungsverfahren+` muss leer sein. +
-Zudem darf der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) nicht einer der folgenden Werte aufweisen: 'abgeschlossen', 'abgeschlossen_ohne_Verfuegung', 'unbekannt'.
-| `+laufendeAenderung_Begruendung+`
-| Der Wert von `+Waldgrenze.Begruendungsverfahren+` muss gesetzt sein und der Wert von `+Waldgrenze.Aufhebungsverfahren+` muss leer sein. +
-Zudem muss der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) den Wert 'abgeschlossen' aufweisen. | `+inKraft+`
-| Die Werte von `+Waldgrenze.Begruendungsverfahren+` und `+Waldgrenze.Aufhebungsverfahren+` müssen gesetzt sein. +
-Zudem darf der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` des Aufhebungsverfahrens (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) nicht einer der folgenden Werte aufweisen: 'abgeschlossen', 'abgeschlossen_ohne_Verfuegung', 'unbekannt'.
-| `+laufendeAenderung_Aufhebung+`
-| Die Werte von `+Waldgrenze.Begruendungsverfahren+` und `+Waldgrenze.Aufhebungsverfahren+` müssen gesetzt sein. +
-Zudem muss der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` des Aufhebungsverfahrens (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) den Wert 'abgeschlossen' aufweisen.
-| `+inKraft_Aufhebung+`
-|===
-
-==== Klasse `+Geometrie+`
-[cols=2*,options="header"]
-|===
-| Quellattribut | Zielattribut
-| - - - m| Punkt
-m| Waldgrenze.Geometrie m| Linie
-| - - - m| Flaeche
-| analog `+Eigentumsbeschraenkung.Rechtsstatus+` m| Rechtsstatus
-| analog `+Eigentumsbeschraenkung.publiziertAb+` m| publiziertAb
-| analog `+Eigentumsbeschraenkung.publiziertBis+` m| publiziertBis
-| https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/8646c41b-543e-401f-836d-4b6beca7370d[Link auf GeoCat] m| MetadatenGeobasisdaten
-|===
-
-==== Klasse `+LegendeEintrag+`
-[cols=2*,options="header"]
-|===
-| Quellattribut | Zielattribut
-m| Typ.Symbol m| Symbol
-m| Typ.Name m| LegendeText
-m| Typ.Code m| ArtCode
-m| https://data.geo.sz.ch/public/Themen/A057b/[Legende.xml] m| ArtCodeliste
-| fix: " `+ch.StatischeWaldgrenzen+` " m| Thema
-| - - - m| SubThema
+| zusammengesetzter Wert; +
+Muster: "SZ"-`+Quelle.OID+` +
+Beispiel: SZ-123e4567-e89b-12d3-a456-426614174000
+| `+Identifikator+`
+| `+Name+`
+| `+Name+`
+| `+Grundwasserleitertyp.Code+` +
+hergeleitet über `+Quelle.rGrundwasserleitertyp+`
+| `+Grundwasserleiter_Typ+`
+| `+Quelltyp+`
+| `+Quelltyp+`
+| `+Fassungsart.Code+` +
+hergeleitet über `+Quelle.rFassungsart+`
+| `+Fassungsart+`
+| `+Nutzungszustand.Code+` +
+hergeleitet über `+Quelle.rNutzungszustand+`
+| `+Nutzungszustand+`
+| `+istTrinkwasser+` +
+Regel: "1" = "ja"; "0" = "nein"; leer = "unbekannt"
+| `+Trinkwasser+`
+| `+Zweck+`
+| `+Zweck+`
+| `+besteht_oeffentliches_Interesse+`
+| `+Oeffentliches_Interesse+`
+| `+Schuettung_minimal+`
+| `+Schuettung_minimal+`
+| `+Schuettung_mittel+`
+| `+Schuettung_mittel+`
+| `+Schuettung_maximal+`
+| `+Schuettung_maximal+`
+| `+ist_Zustroembereich_erforderlich+`
+| `+Zustroembereich_erforderlich+`
+| `+Geometrie+`
+| `+Geometrie+`
+| `+Wasserversorger+`
+| `+Name_WV+`
+| berechneter Wert; +
+OID aus Grundwasserschutzzone aufgrund geometrischem Verschnitt
+| `+Ref_GWSZone+`
+| berechneter Wert; +
+OID aus Grundwasserschutzbereich aufgrund geometrischem Verschnitt
+| `+Ref_GSBereich+`
 |===
 
 === Transformation ins WebGIS
