@@ -28,7 +28,7 @@ hergeleitet über `+Quelle.rFassungsart+`
 | `+Nutzungszustand.Code+` +
 hergeleitet über `+Quelle.rNutzungszustand+`
 | `+Nutzungszustand+`
-| `+istTrinkwasser+` +
+| `+ist_Trinkwasser+` +
 Regel: "1" = "ja"; "0" = "nein"; leer = "unbekannt"
 | `+Trinkwasser+`
 | `+Zweck+`
@@ -54,6 +54,94 @@ OID aus Grundwasserschutzzone aufgrund geometrischem Verschnitt
 OID aus Grundwasserschutzbereich aufgrund geometrischem Verschnitt
 | `+Ref_GSBereich+`
 |===
+
+todo: Erfassungsregeln gemäss Bundesmodell bei der Klassenbeschreibung ergänzen
+
+==== Klasse `+Grundwasserbrunnen+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| zusammengesetzter Wert; +
+Muster: "SZ"-`+Quelle.OID+` +
+Beispiel: SZ-123e4567-e89b-12d3-a456-426614174000
+| `+Identifikator+`
+| `+Name+`
+| `+Name+`
+| `+Brunnenart.Code+` +
+hergeleitet über `+Grundwasserbrunnen.rBrunnenart+`
+| Brunnenart
+| `+Foerdermethode.Code+` +
+hergeleitet über `+Grundwasserbrunnen.rFoerdermethode+`
+| Foerdermethode
+| `+Nutzungszustand.Code+` +
+hergeleitet über `+Grundwasserbrunnen.rNutzungszustand+`
+| `+Nutzungszustand+`
+| `+ist_Trinkwasser+` +
+Regel: "1" = "ja"; "0" = "nein"; leer = "unbekannt"
+| `+Trinkwasser+`
+| `+Zweck+`
+| `+Zweck+`
+| `+besteht_oeffentliches_Interesse+`
+| `+Oeffentliches_Interesse+`
+| `+Entnahmemenge+`
+| `+Pkonz+`
+| `+Entnahmemenge_Gruppe+`
+| `+Pkonz_gruppe+`
+| `+ist_Zustroembereich_erforderlich+`
+| `+Zustroembereich_erforderlich+`
+| `+Geometrie+`
+| `+Geometrie+`
+| `+Wasserversorger+`
+| `+Name_WV+`
+| berechneter Wert; +
+OID aus Grundwasserschutzzone aufgrund geometrischem Verschnitt
+| `+Ref_GWSZone+`
+| berechneter Wert; +
+OID aus Grundwasserschutzbereich aufgrund geometrischem Verschnitt
+| `+Ref_GSBereich+`
+|===
+
+==== Klasse `+Rueckgabebrunnen+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| zusammengesetzter Wert; +
+Muster: "SZ"-`+Quelle.OID+` +
+Beispiel: SZ-123e4567-e89b-12d3-a456-426614174000
+| `+Identifikator+`
+| `+Name+`
+| `+Name+`
+| `+Nutzungszustand.Code+` +
+hergeleitet über `+Rueckgabebrunnen.rNutzungszustand+`
+| `+Nutzungszustand+`
+| `+Zweck+`
+| `+Zweck+`
+| `+Geometrie+`
+| `+Geometrie+`
+|===
+
+==== Klasse `+Anreicherungsanlage+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| zusammengesetzter Wert; +
+Muster: "SZ"-`+Quelle.OID+` +
+Beispiel: SZ-123e4567-e89b-12d3-a456-426614174000
+| `+Identifikator+`
+| `+Name+`
+| `+Name+`
+| `+Anreicherungstyp.Code+` +
+hergeleitet über `+Anreicherungsanlage.rAnreicherungstyp+`
+| `+Typ+`
+| `+Bemerkung_Anreicherungstyp+`
+| `+Typ_Bemerkung+`
+| todo
+| `+Geometrie+`
+
+| `+Geometrie+`
+| `+Geometrie+`
+|===
+
 
 === Transformation ins WebGIS
 * Quellmodell: Das hier beschriebene Datenmodell
