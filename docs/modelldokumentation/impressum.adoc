@@ -12,19 +12,6 @@
 | ID nach kGeoiV | 141 
 | Beteiligte | Zlatko Mrnjec (ZM), Amt für Umwelt und Energie + 
 Kuno Epper (Kep), Amt für Geoinformation
-| Status a| - [ ] Entwurf 
-- [ ] bereit für Vernehmlassung
-- [x] gültig
-|===
-====
-
-.Koreferat
-[%collapsible]
-====
-[cols="20%, 20%, 30%, 30%"]
-|===
-h| Version h| Datum h| Koreferent h| Prüfstelle
-| 1.0 | 2001-01-01 | xy | Amt A
 |===
 ====
 
