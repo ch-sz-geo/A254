@@ -4,7 +4,7 @@ Dieses Dokument beschreibt den Geobasisdatensatz
  
 * *__Grundwasseraustritte und -fassungen__.*
 
-__<weitere Beschreibungen>__
+Dieses Thema ist beim Bund über den Geobasisdatensatz "Grundwasseraustritte, -fassungen und -anreicherungsnalgen" (ID 141) modelliert. Der kantonale Geobasisdatensatz erweitert den Bundesdatensatz mit Mehranforderungen.
 
 === rechtliche Grundlagen
 Seit dem 1. Juli 2008 ist das Bundesgesetz über Geoinformation (GeoIG, SR 510.62) <<allgemeines.adoc#doc-01,[1]>> in Kraft. Am 1. Juli 2012 erfolgte die vollständige Inkraftsetzung des kantonalen Geoinformationsgesetzes (kGeoiG, SRSZ 214.110) <<allgemeines.adoc#doc-03,[3]>>. Es hat zum Ziel, verbindliche Vorgaben für die Erfassung, Modellierung und den Austausch von Geodaten festzulegen.
