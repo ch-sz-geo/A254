@@ -1,8 +1,4 @@
 == Modelltransformationen
-=== Transformation vom Bearbeitungsmodell ins Publikationsmodell
-* Quellmodell: https://raw.githubusercontent.com/ch-sz-geo/A064/refs/heads/main/models/SZ_Schutzwald_V1_Bearbeitung.ili[Bearbeitungsmodell "SZ_Schutzwald_V1" (Version: 2025-01-23)]
-* Zielmodell: https://raw.githubusercontent.com/ch-sz-geo/A064/refs/heads/main/models/SZ_Schutzwald_V1.ili[Publikationsmodell verwaltungsintern "SZ_Schutzwald_V1_Bearbeitung" (Version: 2025-01-23)]
-
 === Transformation ins minimale Geodatenmodell des Bundes
 * Quellmodell: Das hier beschriebene Datenmodell
 * Zielmodell: http://models.geo.admin.ch/BAFU/todo[<Modellname> (Version: 2023-03-20)]
@@ -33,7 +29,7 @@ Regel: "1" = "ja"; "0" = "nein"; leer = "unbekannt"
 | `+Trinkwasser+`
 | `+Zweck+`
 | `+Zweck+`
-| `+besteht_oeffentliches_Interesse+`
+| `+ist_Interesse_oeffentlich+`
 | `+Oeffentliches_Interesse+`
 | `+Schuettung_minimal+`
 | `+Schuettung_minimal+`
@@ -81,7 +77,7 @@ Regel: "1" = "ja"; "0" = "nein"; leer = "unbekannt"
 | `+Trinkwasser+`
 | `+Zweck+`
 | `+Zweck+`
-| `+besteht_oeffentliches_Interesse+`
+| `+ist_Interesse_oeffentlich+`
 | `+Oeffentliches_Interesse+`
 | `+Entnahmemenge+`
 | `+Pkonz+`
@@ -135,15 +131,51 @@ hergeleitet über `+Anreicherungsanlage.rAnreicherungstyp+`
 | `+Typ+`
 | `+Bemerkung_Anreicherungstyp+`
 | `+Typ_Bemerkung+`
-| todo
-| `+Geometrie+`
-
-| `+Geometrie+`
-| `+Geometrie+`
+| `+Versickerung_max+`
+| `+Max_Versickerung+`
+| `+Bezugsgewaesser+`
+| `+Bezugsgewaesser+`
+| `+Zweck+`
+| `+Zweck+`
+| `+Anreicherungsanlage_Punkt.Geometrie+`
+| `+GeometriePunkt+`
+| `+Anreicherungsanlage_Linie.Geometrie+`
+| `+GeometrieLinie+`
+| `+Anreicherungsanlage_Flaeche.Geometrie+`
+| `+GeometrieFlaeche+`
+| `+Wasserversorger+`
+| `+Name_WV+`
+| berechneter Wert; +
+OID aus Grundwasserschutzzone aufgrund geometrischem Verschnitt
+| `+Ref_GWSZone+`
 |===
 
+todo: Erfassungsregeln gemäss Bundesmodell bei der Klassenbeschreibung ergänzen
 
-=== Transformation ins WebGIS
+==== Klasse `+Fassungsstrang_Stollen+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| zusammengesetzter Wert; +
+Muster: "SZ"-`+Quelle.OID+` +
+Beispiel: SZ-123e4567-e89b-12d3-a456-426614174000
+| `+Identifikator+`
+| `+Fassungstyp.Code+` +
+hergeleitet über `+Fassungsstrang_Stollen.rFassungstyp+`
+| `+Typ+`
+| `+Geometrie+`
+| `+Geometrie+`
+| berechneter Wert; +
+OID aus Grundwasserschutzzone aufgrund geometrischem Verschnitt
+| `+Ref_GWSZone+`
+| berechneter Wert; +
+OID aus Grundwasserschutzbereich aufgrund geometrischem Verschnitt
+| `+Ref_GSBereich+`
+|===
+
+todo: Erfassungsregeln gemäss Bundesmodell bei der Klassenbeschreibung ergänzen
+
+=== todo Transformation ins WebGIS
 * Quellmodell: Das hier beschriebene Datenmodell
 * Zielmodell: keines (siehe unten)
 
@@ -186,15 +218,6 @@ hergeleitet über: +
 m| verfuegung_datum_nr
 m| Stockgrenze.Geometrie m| geom
 |===
-
-[cols="e,m,^,>s",width="25%"]
-|===
-|1 >s|2 |3 |4
-^|5 2.2+^.^|6 .3+<.>m|7
-^|8
-|9 2+>|10
-|===
-
 
 ifdef::backend-pdf[]
 <<<
