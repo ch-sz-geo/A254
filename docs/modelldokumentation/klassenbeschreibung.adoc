@@ -5,7 +5,7 @@ Das Topic `+Stammdaten+` umfasst alle statischen Werte. Darunter fallen z.B. die
 Die Stammdaten werden durch die zuständige Stelle vorgegeben. Bei Bundesthemen ist dies das für die Modellierung zuständige Bundesamt. Bei kantonalen Themen das zuständige kantonale Amt. Die Stammdaten von Bundesthemen können auf der Stufe Kanton erweitert werden. Die kantonalen Erweiterungen werden bei der Überführung ins Bundesmodell den entsprechenden Bundestypen zugeordnet. Bei Bedarf werden die Stammdaten durch die Abteilung Geoinformation nachgeführt und im https://github.com/ch-sz-geo/A000_template/tree/main/data[data-Verzeichnis] des jeweiligen Themas veröffentlicht.
 
 ==== Klasse `+Katalogeintrag+`
-Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte `+Katalogeintrag+`, sondern nur Objekte von den spezialisierten Klassen.
+Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse ist abstrakt: Es gibt keine Objekte `+Katalogeintrag+`, sondern nur Objekte von den spezialisierten Klassen.
 
 [cols="10%, 60%, 20%, 10%",options="header"]
 |===
@@ -62,20 +62,6 @@ m|Name
 
 ==== Klasse `+Fassungsart+`
 Die Klasse `+Fassungsart+` führt die Werte des Katalogs "Fassungsart". Sie ist eine Spezialisierung der Klasse `+Katalogeintrag+` und führt keine weiteren Attribute.
-
-[cols=4*,options="header"]
-|===
-| Name | Beschreibung | Beispiel | Freigabe
-4+| _Diese Klasse führt keine zusätzlichen Attribute_
-4+| *Anforderungen*
-m|Code
-3+| Die Werte müssen eindeutig sein
-m|Name
-3+| Die Werte müssen eindeutig sein
-|===
-
-==== Klasse `+Wasserversorger+`
-Die Klasse `+Wasserversorger+` führt die Werte des Katalogs "Wasserversorger". Sie ist eine Spezialisierung der Klasse `+Katalogeintrag+` und führt keine weiteren Attribute.
 
 [cols=4*,options="header"]
 |===
@@ -147,8 +133,8 @@ m|Name
 === Topic `+Fachdaten+`
 Das Topic `+Fachdaten+` umfasst die eigentlichen, fachlichen Klassen des Themas.
 
-==== Klasse `+Klasse1+`
-Die Klasse `+Klasse1+` führt .....
+==== Klasse `+Quelle+`
+Die Klasse `+Quelle+` führt die Daten zur Quelle.
 
 [cols=4*,options="header"]
 |===
@@ -161,69 +147,367 @@ m| OID
 m| erfasstVon
 | Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
 | Musterha
-| intern
+| +++<span style="color:red;">intern</span>+++
 m| erfasstAm
 | Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
 | 1980-03-21T15:38:12
-| intern
+| öffentlich
 m| geaendertVon
 | Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
 | Muelleran
-| intern
+| +++<span style="color:red;">intern</span>+++
 m| geaendertAm
 | Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
 | 2024-07-30T08:07:57
-| intern
-m| Kennung
-| fortlaufende, einfach aufgebaute Kennung, welche sich zur Identifikation eignet
-| GA1159
 | öffentlich
-m| KennungAlt
-| Nummer aus dem alten geologischen Archiv; entspricht "IDAlternate" aus DM_GeolAssets_V2
-| GA01.2.1461
+m| Name
+| Bezeichnung der Quelle
+| Rüti
+| +++<span style="color:red;">intern</span>+++
+m| Quelltyp
+| Typ der Quelle als Freitext
+| todo
+| +++<span style="color:red;">intern</span>+++
+m| ist_Trinkwasser
+| Indikator, ob das Wasser Trinkwasserqualität aufweist
+| ja
+| +++<span style="color:red;">intern</span>+++
+m| Zweck
+| Angabe, wie das Wasser verwendet wird
+| Gartenbewässerung
 | öffentlich
-m| Titel
-| Titel des Dokuments; entspricht "IDAlternate" aus DM_GeolAssets_V2
-| UVP:GeolGeotecGutachtenzumVorprojekt
+m| ist_Interesse_oeffentlich
+| Indikator, ob die Quelle von öffentlichem Interesse ist
+| ja
+| +++<span style="color:red;">intern</span>+++
+m| Schuettung_minimal
+| minimale Schüttmenge in Liter pro Minute; falls unbekannt: "-1"
+| 5.75
 | öffentlich
-m| Erstelldatum
-| Datum des Berichtes; entspricht "DateCreation" aus DM_GeolAssets_V2
-| 1985-03-21
+m| Schuettung_mittel
+| durchschnittliche Schüttmenge in Liter pro Minute; falls unbekannt: "-1"
+| 12.5
+| +++<span style="color:red;">intern</span>+++
+m| Schuettung_maximal
+| maximale Schüttmenge in Liter pro Minute; falls unbekannt: "-1"
+| 18.25
 | öffentlich
-m| Dokumentlink
-| Link, über den auf das Dokument zugegrifen werden kann; Pfad zum Speicher- bzw. Ablageort des Dokuments
-| Q:\...\2021-01-18-0303_NB_Standseilbahn_Stoos_Bauproj_KL.pdf
+m| ist_Zustroembereich_erforderlich
+| Indikator, ob für die Quelle ein Zustrombereich erforderlich ist
+| nein
 | öffentlich
-m| Baugesuchsnummer
-| Kennung des Baugesuches, welches mit dem Dokument in Verbindung steht
-| B2019-0421
-| öffentlich
-m| Autor
-| Kennung der Objekt-ID des Unternehmens, welches den Bericht verfasst hat. Auf eine ausmodellierte Beziehung wird der Einfachheit halber verzichtet, so dass hier nur die ID eingetragen werden muss.
-| 2a150ef7-eb3d-4661-99d6-52d6eb7a5fd0
-| öffentlich
-m| Bemerkung
-| Kommentar zum entsprechenden Dokument; entspricht "Description" aus DM_GeolAssets_V2
-| Das ist meine Bemerkung zu diesem Dokument.
-| öffentlich
+m| Wasserversorger
+| Name des Wasserversorgers als Freitext
+| Wasserversorgung Ilisthal
+| +++<span style="color:red;">intern</span>+++
 4+| *Beziehungsattribute*
-m| rGeometrie
-| Fremdschlüssel zur Geometrie, welche mit dem Dokument verknüpft ist.
+m| rGrundwasserleitertyp
+| Fremdschlüssel zum Katalog "Grundwasserleitertyp" (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| todo: öffentlich
+m| rFassungsart
+| Fremdschlüssel zum Katalog "Fassungsart" (Stammdaten)
 | ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
 | öffentlich
-m| rInhalt
-| Fremdschlüssel zum Inhalt (Stammdaten); entspricht "Kind" aus DM_GeolAssets_V2
-| e0807260-956b-40a2-871a-e32c51ebf192 (für "Bohrprofil")
+m| rNutzungszustand
+| Fremdschlüssel zum Katalog "Nutzungszustand" (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
 | öffentlich
 4+| *Geometrie*
 m| Geometrie
-| Geometrie des Objektes
+| Lage des Objektes als Punkt
 | (ohne Beispiel)
 | öffentlich
 4+| *Bedingungen*
 m|Kennung
-3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
-* Nach der Vergabe muss der Wert unverändert bleiben.
+3+a| * todo 1
+* todo 2
+|===
+
+==== Klasse `+Grundwasserbrunnen+`
+Die Klasse `+Grundwasserbrunnen+` führt die Daten zum Grundwasserbrunnen.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| öffentlich
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| öffentlich
+m| Name
+| Bezeichnung der Quelle
+| Rüti
+| +++<span style="color:red;">intern</span>+++
+m| ist_Trinkwasser
+| Indikator, ob das Wasser Trinkwasserqualität aufweist
+| ja
+| +++<span style="color:red;">intern</span>+++
+m| Zweck
+| Angabe, wie das Wasser verwendet wird
+| Gartenbewässerung
+| öffentlich
+m| ist_Interesse_oeffentlich
+| Indikator, ob die Quelle von öffentlichem Interesse ist
+| ja
+| +++<span style="color:red;">intern</span>+++
+m| Entnahmemenge
+| Wassermenge in Liter pro Minute, welche gefürdert wird; falls unbekannt: "-1"
+| 5.75
+| todo: öffentlich
+m| Entnahmemenge_Gruppe
+| Wassermenge in Liter pro Minute, welche über die ganze Gruppe gefürdert wird; falls unbekannt: "-1"
+| 12.5
+| +++<span style="color:red;">intern</span>+++
+m| ist_Zustroembereich_erforderlich
+| Indikator, ob für die Quelle ein Zustrombereich erforderlich ist
+| nein
+| öffentlich
+m| Wasserversorger
+| Name des Wasserversorgers als Freitext
+| Wasserversorgung Ilisthal
+| +++<span style="color:red;">intern</span>+++
+4+| *Beziehungsattribute*
+m| rBrunnenart
+| Fremdschlüssel zum Katalog "Brunnenart" (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| todo: öffentlich
+m| rFoerdermethode
+| Fremdschlüssel zum Katalog "Foerdermethode" (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+m| rNutzungszustand
+| Fremdschlüssel zum Katalog "Nutzungszustand" (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+4+| *Geometrie*
+m| Geometrie
+| Lage des Objektes als Punkt
+| (ohne Beispiel)
+| öffentlich
+4+| *Bedingungen*
+m|Kennung
+3+a| * todo 1
+* todo 2
+|===
+
+==== Klasse `+Rueckgabebrunnen+`
+Die Klasse `+Rueckgabebrunnen+` führt die Daten zum Rueckgabebrunnen.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| öffentlich
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| öffentlich
+m| Name
+| Bezeichnung der Quelle
+| Rüti
+| +++<span style="color:red;">intern</span>+++
+m| Zweck
+| Angabe, wie das Wasser verwendet wird
+| Gartenbewässerung
+| öffentlich
+4+| *Beziehungsattribute*
+m| rNutzungszustand
+| Fremdschlüssel zum Katalog "Nutzungszustand" (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+4+| *Geometrie*
+m| Geometrie
+| Lage des Objektes als Punkt
+| (ohne Beispiel)
+| öffentlich
+4+| *Bedingungen*
+m|Kennung
+3+a| * todo 1
+* todo 2
+|===
+
+==== Klasse `+Anreicherungsanlage+`
+Die Klasse `+Anreicherungsanlage+` führt die Daten zum Anreicherungsanlage. Die Klasse ist abstrakt: Es gibt keine Objekte `+Anreicherungsanlage+`, sondern nur Objekte von den spezialisierten Klassen.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| öffentlich
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| öffentlich
+m| Name
+| Bezeichnung der Quelle
+| Rüti
+| +++<span style="color:red;">intern</span>+++
+m| Bemerkung_Anreicherungstyp
+| Bemerkung zum Anreicherungstyp
+| todo
+| öffentlich
+m| Versickerung_max
+| Wert der maximalen Versickerungsmenge; todo: Einheit?; falls unbekannt: "-1"
+| 12000
+| öffentlich
+m| Bezugsgewaesser
+| todo
+| todo
+| öffentlich
+m| Zweck
+| Angabe, wie das Wasser verwendet wird
+| Gartenbewässerung
+| öffentlich
+m| Wasserversorger
+| Name des Wasserversorgers als Freitext
+| Wasserversorgung Ilisthal
+| +++<span style="color:red;">intern</span>+++
+4+| *Beziehungsattribute*
+m| rAnreicherungstyp
+| Fremdschlüssel zum Katalog "Anreicherungstyp" (Stammdaten)
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+4+| *Geometrie*
+4+| - - -
+4+| *Bedingungen*
+m|Kennung
+3+a| * todo 1
+* todo 2
+|===
+
+==== Klasse `+Anreicherungsanlage_Punkt+`
+Die Klasse `+Anreicherungsanlage_Punkt+` führt Anreicherungsanlagen mit Geometrietyp "Punkt". Sie ist eine Spezialisierung der Klasse `+Anreicherungsanlage+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Geometrie*
+m| Geometrie
+| Lage des Objektes als Punkt
+| (ohne Beispiel)
+| öffentlich
+4+| *Anforderungen*
+4+| - - -
+|===
+
+==== Klasse `+Anreicherungsanlage_Linie+`
+Die Klasse `+Anreicherungsanlage_Linie+` führt Anreicherungsanlagen mit Geometrietyp "Linie". Sie ist eine Spezialisierung der Klasse `+Anreicherungsanlage+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Geometrie*
+m| Geometrie
+| Lage des Objektes als Linie
+| (ohne Beispiel)
+| öffentlich
+4+| *Anforderungen*
+4+| - - -
+|===
+
+==== Klasse `+Anreicherungsanlage_Flaeche+`
+Die Klasse `+Anreicherungsanlage_Flaeche+` führt Anreicherungsanlagen mit Geometrietyp "Fläche". Sie ist eine Spezialisierung der Klasse `+Anreicherungsanlage+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Geometrie*
+m| Geometrie
+| Lage des Objektes als Fläche
+| (ohne Beispiel)
+| öffentlich
+4+| *Anforderungen*
+4+| - - -
+|===
+
+==== Klasse `+Fassungsstrang_Stollen+`
+Die Klasse `+Fassungsstrang_Stollen+` führt die Daten zum Fassungsstrang bzw. Stollen.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| öffentlich
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| öffentlich
+4+| *Beziehungsattribute*
+4+| - - -
+4+| *Geometrie*
+m| Geometrie
+| Lage des Objektes als Linie
+| (ohne Beispiel)
+| öffentlich
+4+| *Bedingungen*
+m|Kennung
+3+a| * todo 1
+* todo 2
 |===
 
 ifdef::backend-pdf[]
