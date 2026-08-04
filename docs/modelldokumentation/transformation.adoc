@@ -1,7 +1,11 @@
 == Modelltransformationen
 === Transformation ins minimale Geodatenmodell des Bundes
-* Quellmodell: Das hier beschriebene Datenmodell
-* Zielmodell: http://models.geo.admin.ch/BAFU/todo[<Modellname> (Version: 2023-03-20)]
+Die Daten für das Bundesthema "Grundwasseraustritte" liegen beim Kanton in zwei verschiedenen Themen: "Inventar Trinkwasserversorgung in Mangellagen (A059)" und der "Wärmenutzung (A034)". Aus diesem Grund wird kein eigenens Datenmodell erstellt. Bei der Abtabe gemäss Bundesmodell werden die Daten entsprechend der unten aufgeführten Abbildung überführt.
+
+* Quellmodell:
+** Das Datenmodell im Thema A034
+** Das Datenmodell im Thema A059
+* Zielmodell: https://models.geo.admin.ch/BAFU/Grundwasseraustritte_V2_0.ili[Grundwasseraustritte_V2_0 (Version: 2024-09-11)]
 
 ==== Klasse `+Quelle+`
 [cols=2*,options="header"]
@@ -117,38 +121,7 @@ hergeleitet über `+Rueckgabebrunnen.rNutzungszustand+`
 |===
 
 ==== Klasse `+Anreicherungsanlage+`
-[cols=2*,options="header"]
-|===
-| Quellattribut | Zielattribut
-| zusammengesetzter Wert; +
-Muster: "SZ"-`+Quelle.OID+` +
-Beispiel: SZ-123e4567-e89b-12d3-a456-426614174000
-| `+Identifikator+`
-| `+Name+`
-| `+Name+`
-| `+Anreicherungstyp.Code+` +
-hergeleitet über `+Anreicherungsanlage.rAnreicherungstyp+`
-| `+Typ+`
-| `+Bemerkung_Anreicherungstyp+`
-| `+Typ_Bemerkung+`
-| `+Versickerung_max+`
-| `+Max_Versickerung+`
-| `+Bezugsgewaesser+`
-| `+Bezugsgewaesser+`
-| `+Zweck+`
-| `+Zweck+`
-| `+Anreicherungsanlage_Punkt.Geometrie+`
-| `+GeometriePunkt+`
-| `+Anreicherungsanlage_Linie.Geometrie+`
-| `+GeometrieLinie+`
-| `+Anreicherungsanlage_Flaeche.Geometrie+`
-| `+GeometrieFlaeche+`
-| `+Wasserversorger+`
-| `+Name_WV+`
-| berechneter Wert; +
-OID aus Grundwasserschutzzone aufgrund geometrischem Verschnitt
-| `+Ref_GWSZone+`
-|===
+Der Kanton führt keine Daten zu Anreicherungsanlagen. Aus diesem Grund bleibt die Klasse leer.
 
 todo: Erfassungsregeln gemäss Bundesmodell bei der Klassenbeschreibung ergänzen
 
