@@ -11,41 +11,35 @@ Die Daten für das Bundesthema "Grundwasseraustritte" liegen beim Kanton in zwei
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| zusammengesetzter Wert; +
-Muster: "SZ"-`+Quelle.OID+` +
-Beispiel: SZ-123e4567-e89b-12d3-a456-426614174000
+| A059: `+Basisattribute.Identifikator+`
 | `+Identifikator+`
+| A059: `+Basisattribute.Name+`
 | `+Name+`
-| `+Name+`
-| `+Grundwasserleitertyp.Code+` +
-hergeleitet über `+Quelle.rGrundwasserleitertyp+`
+| A059: `+Quelle.Grundwasserleiter_Typ+`
 | `+Grundwasserleiter_Typ+`
+| A059: `+Quelle.Quelltyp+`
 | `+Quelltyp+`
-| `+Quelltyp+`
-| `+Fassungsart.Code+` +
-hergeleitet über `+Quelle.rFassungsart+`
+| A059: `+Quelle.Fassungsart+`
 | `+Fassungsart+`
-| `+Nutzungszustand.Code+` +
-hergeleitet über `+Quelle.rNutzungszustand+`
+| A059: `+Quelle.Nutzungszustand+`
 | `+Nutzungszustand+`
-| `+ist_Trinkwasser+` +
-Regel: "1" = "ja"; "0" = "nein"; leer = "unbekannt"
+| A059: `+Quelle.Trinkwasser+`
 | `+Trinkwasser+`
+| A059: `+Quelle.Zweck+`
 | `+Zweck+`
-| `+Zweck+`
-| `+ist_Interesse_oeffentlich+`
+| A059: `+Quelle.Oeffentliches_Interesse+`
 | `+Oeffentliches_Interesse+`
+| A059: `+Quelle.Schuettung_minimal+`
 | `+Schuettung_minimal+`
-| `+Schuettung_minimal+`
+| A059: `+Quelle.Schuettung_mittel+`
 | `+Schuettung_mittel+`
-| `+Schuettung_mittel+`
+| A059: `+Quelle.Schuettung_maximal+`
 | `+Schuettung_maximal+`
-| `+Schuettung_maximal+`
-| `+ist_Zustroembereich_erforderlich+`
+| - - -
 | `+Zustroembereich_erforderlich+`
+| A059: `+Quelle.Geometrie+`
 | `+Geometrie+`
-| `+Geometrie+`
-| `+Wasserversorger+`
+| - - -
 | `+Name_WV+`
 | berechneter Wert; +
 OID aus Grundwasserschutzzone aufgrund geometrischem Verschnitt
