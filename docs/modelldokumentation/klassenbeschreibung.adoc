@@ -204,7 +204,7 @@ m| Wasserversorger
 m| rGrundwasserleitertyp
 | Fremdschlüssel zum Katalog "Grundwasserleitertyp" (Stammdaten)
 | ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
-| todo: öffentlich
+| öffentlich
 m| rFassungsart
 | Fremdschlüssel zum Katalog "Fassungsart" (Stammdaten)
 | ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
@@ -337,7 +337,7 @@ m| geaendertAm
 m| Name
 | Bezeichnung der Quelle
 | Rüti
-| +++<span style="color:red;">intern</span>+++
+| öffentlich
 m| Zweck
 | Angabe, wie das Wasser verwendet wird
 | Gartenbewässerung
