@@ -2,9 +2,9 @@
 === Transformation ins minimale Geodatenmodell des Bundes
 Die Daten für das Bundesthema "Grundwasseraustritte" liegen beim Kanton in zwei verschiedenen Themen: "Inventar Trinkwasserversorgung in Mangellagen (A059)" und der "Wärmenutzung (A034)". Aus diesem Grund wird kein eigenens Datenmodell erstellt. Bei der Abtabe gemäss Bundesmodell werden die Daten entsprechend der unten aufgeführten Abbildung überführt.
 
-* Quellmodell:
-** Das Datenmodell im Thema A034
-** Das Datenmodell im Thema A059
+* Quellmodelle:
+** Das Datenmodell des Themas https://ch-sz-geo.github.io/A034/docs/modelldokumentation.html[A034]
+** Das Datenmodell des Themas https://ch-sz-geo.github.io/A059/docs/modelldokumentation.html[A059]
 * Zielmodell: https://models.geo.admin.ch/BAFU/Grundwasseraustritte_V2_0.ili[Grundwasseraustritte_V2_0 (Version: 2024-09-11)]
 
 ==== Klasse `+Quelle+`
