@@ -1,12 +1,5 @@
 == Diagramme
-=== Komponentendiagramm
-image::../img/Komponentendiagramm.jpg[]
-
-=== Klassendiagramm
-image::../img/Klassendiagramm.jpg[]
-
-image::../img/Legende Klassendiagramm.png[width=350]
-
+Dieses Thema führt kein eigenes Datenmodell. Aus diesem Grund werden keine Diagramme abgebildet. Es wird auf die Modelldokumentation des Bundes verwiesen.
 ifdef::backend-pdf[]
 <<<
 endif::[]
