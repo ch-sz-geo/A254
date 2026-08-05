@@ -1,4 +1,5 @@
 == Klassenbeschreibung
+
 Dieses Thema führt kein eigenes Datenmodell. Aus diesem Grund werden keine Klassen beschrieben. Es wird auf die Modelldokumentation des Bundes verwiesen.
 
 ifdef::backend-pdf[]
