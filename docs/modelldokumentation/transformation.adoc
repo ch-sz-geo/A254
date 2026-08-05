@@ -120,10 +120,10 @@ A059: "SZ"-`+Fassungsstrang_Stollen.Identifikator+`
 | A059: `+Fassungsstrang_Stollen.Geometrie+`
 | `+Geometrie+`
 | berechneter Wert; +
-OID der Grundwasserschutzzone aufgrund geometrischem Verschnitt mit der Geometrie des Fassimgsstranges bzw. Stollens
+OID der Grundwasserschutzzone aufgrund geometrischem Verschnitt mit der Geometrie des Fassungsstranges bzw. Stollens
 | `+Ref_GWSZone+`
 | berechneter Wert; +
-OID des Grundwasserschutzbereichs aufgrund geometrischem Verschnitt mit der Geometrie des Fassimgsstranges bzw. Stollens
+OID des Grundwasserschutzbereichs aufgrund geometrischem Verschnitt mit der Geometrie des Fassungsstranges bzw. Stollens
 | `+Ref_GSBereich+`
 |===
 
