@@ -59,7 +59,7 @@ A034: "SZ"-`+Grundwasserfassung.Identifikator+`
 | A034: `+Grundwasserfassung.Name+`
 | `+Name+`
 | A034: `+Grundwasserfassung.Fassungsart+`
-| Brunnenart
+| `+Brunnenart+`
 | A034: `+Grundwasserfassung.Foerdermethode+`
 | `+Foerdermethode+`
 | A034: `+Grundwasserfassung.Nutzungszustand+`
