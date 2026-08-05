@@ -9,7 +9,7 @@ Dieses Thema ist beim Bund über den gleichnamigen Geobasisdatensatz (ID 141) mo
 * A059: Inventar der Trinkwasserversorgung in Mangellagen
 * A034: Wärmenutzung
 
-Das Thema A059 führt die meisten Klassen, welche als Datenquelle für die Grundwasseraustritte, -fassungen und -anreicherungsanlagen dienen. Das Thema A034 ist lediglich die Datenquelle für die "Rückgabebrunnen" (siehe Abbildung unten).
+Das Thema A059 führt die meisten Klassen, welche als Datenquelle für die Grundwasseraustritte, -fassungen und -anreicherungsanlagen dient. Das Thema A034 ist lediglich die Datenquelle für die "Rückgabebrunnen" (siehe Abbildung unten).
 
 image::../img/A254 Datenfluss.jpg[width=600]
 
