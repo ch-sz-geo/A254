@@ -4,7 +4,7 @@ Dieses Dokument handelt vom Geobasisdatensatz
  
 * *__Grundwasseraustritte, -fassungen und -anreicherungsnalgen__ (A254).*
 
-Dieses Thema ist beim Bund über den gleichnamigen Geobasisdatensatz (ID 141) modelliert. Der Kanton hingegen führt dieses Thema nicht explizit. Die Daten liegen auf zwei verschiedenen Themen und können aus diesen implizit hergeleitet werden, weshalb auf eine zusätzliche Modellierung verzichtet wird. Die beiden Themen sind:
+Dieses Thema ist beim Bund über den gleichnamigen Geobasisdatensatz (ID 141) modelliert. Der Kanton hingegen führt dieses Thema nicht explizit. Die Daten liegen auf zwei verschiedenen Themen und können aus diesen implizit hergeleitet werden, weshalb auf eine separate Modellierung verzichtet wird. Die beiden Themen sind:
 
 * A059: Inventar der Trinkwasserversorgung in Mangellagen
 * A034: Wärmenutzung
