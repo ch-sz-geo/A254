@@ -42,56 +42,48 @@ Die Daten für das Bundesthema "Grundwasseraustritte" liegen beim Kanton in zwei
 | - - -
 | `+Name_WV+`
 | berechneter Wert; +
-OID aus Grundwasserschutzzone aufgrund geometrischem Verschnitt
+OID der Grundwasserschutzzone aufgrund geometrischem Verschnitt mit dem Standort der Quelle
 | `+Ref_GWSZone+`
 | berechneter Wert; +
-OID aus Grundwasserschutzbereich aufgrund geometrischem Verschnitt
+OID des Grundwasserschutzbereichs aufgrund geometrischem Verschnitt mit dem Standort der Quelle
 | `+Ref_GSBereich+`
 |===
-
-todo: Erfassungsregeln gemäss Bundesmodell bei der Klassenbeschreibung ergänzen
 
 ==== Klasse `+Grundwasserbrunnen+`
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| zusammengesetzter Wert; +
-Muster: "SZ"-`+Quelle.OID+` +
-Beispiel: SZ-123e4567-e89b-12d3-a456-426614174000
+| todo
 | `+Identifikator+`
+| todo
 | `+Name+`
-| `+Name+`
-| `+Brunnenart.Code+` +
-hergeleitet über `+Grundwasserbrunnen.rBrunnenart+`
+| todo
 | Brunnenart
-| `+Foerdermethode.Code+` +
-hergeleitet über `+Grundwasserbrunnen.rFoerdermethode+`
-| Foerdermethode
-| `+Nutzungszustand.Code+` +
-hergeleitet über `+Grundwasserbrunnen.rNutzungszustand+`
+| todo
+| `+Foerdermethode+`
+| todo
 | `+Nutzungszustand+`
-| `+ist_Trinkwasser+` +
-Regel: "1" = "ja"; "0" = "nein"; leer = "unbekannt"
+| todo
 | `+Trinkwasser+`
+| todo
 | `+Zweck+`
-| `+Zweck+`
-| `+ist_Interesse_oeffentlich+`
+| todo
 | `+Oeffentliches_Interesse+`
-| `+Entnahmemenge+`
+| todo
 | `+Pkonz+`
-| `+Entnahmemenge_Gruppe+`
+| todo
 | `+Pkonz_gruppe+`
-| `+ist_Zustroembereich_erforderlich+`
+| todo
 | `+Zustroembereich_erforderlich+`
+| todo
 | `+Geometrie+`
-| `+Geometrie+`
-| `+Wasserversorger+`
+| todo
 | `+Name_WV+`
 | berechneter Wert; +
-OID aus Grundwasserschutzzone aufgrund geometrischem Verschnitt
+OID der Grundwasserschutzzone aufgrund geometrischem Verschnitt mit dem Standort des Grundwasserbrunnens
 | `+Ref_GWSZone+`
 | berechneter Wert; +
-OID aus Grundwasserschutzbereich aufgrund geometrischem Verschnitt
+OID des Grundwasserschutzbereichs aufgrund geometrischem Verschnitt mit dem Standort des Grundwasserbrunnens
 | `+Ref_GSBereich+`
 |===
 
@@ -99,91 +91,39 @@ OID aus Grundwasserschutzbereich aufgrund geometrischem Verschnitt
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| zusammengesetzter Wert; +
-Muster: "SZ"-`+Quelle.OID+` +
-Beispiel: SZ-123e4567-e89b-12d3-a456-426614174000
+| zusammengesetzter Wert: +
+A034: "SZ"-`+Rueckgabe.Identifikator+`
 | `+Identifikator+`
+| - - -
 | `+Name+`
-| `+Name+`
-| `+Nutzungszustand.Code+` +
-hergeleitet über `+Rueckgabebrunnen.rNutzungszustand+`
+| A034: `+Rueckgabe.Nutzungszustand+`
 | `+Nutzungszustand+`
+| A034: `+Rueckgabe.Zweck+`
 | `+Zweck+`
-| `+Zweck+`
-| `+Geometrie+`
+| A034: `+Rueckgabe.Geometrie+`
 | `+Geometrie+`
 |===
 
 ==== Klasse `+Anreicherungsanlage+`
 Der Kanton führt keine Daten zu Anreicherungsanlagen. Aus diesem Grund bleibt die Klasse leer.
 
-todo: Erfassungsregeln gemäss Bundesmodell bei der Klassenbeschreibung ergänzen
-
 ==== Klasse `+Fassungsstrang_Stollen+`
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| zusammengesetzter Wert; +
-Muster: "SZ"-`+Quelle.OID+` +
-Beispiel: SZ-123e4567-e89b-12d3-a456-426614174000
+| zusammengesetzter Wert: +
+A059: "SZ"-`+Fassungsstrang_Stollen.Identifikator+`
 | `+Identifikator+`
-| `+Fassungstyp.Code+` +
-hergeleitet über `+Fassungsstrang_Stollen.rFassungstyp+`
+| A059: `+Fassungsstrang_Stollen.Typ+`
 | `+Typ+`
-| `+Geometrie+`
+| A059: `+Fassungsstrang_Stollen.Geometrie+`
 | `+Geometrie+`
 | berechneter Wert; +
-OID aus Grundwasserschutzzone aufgrund geometrischem Verschnitt
+OID der Grundwasserschutzzone aufgrund geometrischem Verschnitt mit der Geometrie des Fassimgsstranges bzw. Stollens
 | `+Ref_GWSZone+`
 | berechneter Wert; +
-OID aus Grundwasserschutzbereich aufgrund geometrischem Verschnitt
+OID des Grundwasserschutzbereichs aufgrund geometrischem Verschnitt mit der Geometrie des Fassimgsstranges bzw. Stollens
 | `+Ref_GSBereich+`
-|===
-
-todo: Erfassungsregeln gemäss Bundesmodell bei der Klassenbeschreibung ergänzen
-
-=== todo Transformation ins WebGIS
-* Quellmodell: Das hier beschriebene Datenmodell
-* Zielmodell: keines (siehe unten)
-
-==== Allgemeines
-Für die WebGIS-Publikation werden die Daten optimiert. Dies ist häufig mit einer Denormalisierung verbunden ("flachwalzen" der Daten). Der Attributumfang richtet sich nach den Anforderungen der zuständigen Stelle und ist im Normalfall geringer als im Ausgangsmodell. Eine weitere Besonderheit kommt den Tabellen der WebGIS-Datenbank zu. Sie weisen Standard-Spalten auf, welche nicht Teil des Datenmodells sind. Es handelt sich um folgende Spalten:
-
-**Standardspalten:**
-[cols=2*,options="header"]
-|===
-| Spaltenname | Beschreibung
-m| id | eindeutige Identifikation des Objektes; kann von der OID der Ausgangsdaten abweichen, falls Objekte zum Zweck der Publikation aufgeteilt werden müssen
-m| etl_dt | Zeitstempel, an dem der Datensatz in die Tabelle geschrieben wurde (etl: extract - transfer - load)
-m| etl_job | Name des Jobs, mit dem die Daten auf die Tabelle geschrieben wurde
-m| asof_dt | Datum, an dem am Datensatz die letzten Änderungen vorgenommen wurden. Dieser Wert wird in den Metadaten des Datensatzes nachgeführt.
-|===
-
-Das WebGIS bezieht die Daten direkt aus der Datenbank. Aus diesem Grund wird nachfolgend von "Tabelle" und "Spalte" anstelle von "Klasse" und "Attribut" gesprochen. Der Klassenname erscheint lediglich in der Überschrift.
-
-==== Tabelle der `+Waldgrenze+`
-[cols=2*,options="header"]
-|===
-| Quellattribut | Zielspalte
-| - - - | (Standardspalten gemäss den Angaben oben)
-| `+Typ.Code+` +
-hergeleitet über `+Waldgrenze.rTyp+` m| typ
-| `+Typ.Name+` +
-hergeleitet über `+Waldgrenze.rTyp+` m| bezeichnung
-m| Waldgrenze.Geometrie m| geom
-|===
-
-==== Tabelle der `+Stockgrenze+`
-[cols=2*,options="header"]
-|===
-| Quellattribut | Zielspalte
-| - - - | (Standardspalten gemäss den Angaben oben)
-| `+Verfahren.Verfuegungsnummer+` +
-hergeleitet über: +
-`+Stockgrenze.rWaldgrenze+` &#x2192; +
-`+Waldgrenze.Begruendungsverfahren+`
-m| verfuegung_datum_nr
-m| Stockgrenze.Geometrie m| geom
 |===
 
 ifdef::backend-pdf[]
