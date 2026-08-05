@@ -1,10 +1,19 @@
 == Allgemeines
 === Ziel und Zweck
-Dieses Dokument beschreibt den Geobasisdatensatz
+Dieses Dokument handelt vom Geobasisdatensatz
  
-* *__Grundwasseraustritte und -fassungen__.*
+* *__Grundwasseraustritte, -fassungen und -anreicherungsnalgen__ (A254).*
 
-__<weitere Beschreibungen>__
+Dieses Thema ist beim Bund über den gleichnamigen Geobasisdatensatz (ID 141) modelliert. Der Kanton hingegen führt dieses Thema nicht explizit. Die Daten liegen auf zwei verschiedenen Themen und können aus diesen implizit hergeleitet werden, weshalb auf eine zusätzliche Modellierung verzichtet wird. Die beiden Themen sind:
+
+* A059: Inventar der Trinkwasserversorgung in Mangellagen
+* A034: Wärmenutzung
+
+Das Thema A059 führt die meisten Klassen, welche als Datenquelle für die Grundwasseraustritte, -fassungen und -anreicherungsanlagen dienen. Das Thema A034 ist lediglich die Datenquelle für die "Rückgabebrunnen" (siehe Abbildung unten).
+
+image::../img/A254 Datenfluss.jpg[width=600]
+
+Da es im Kanton keine Anreicherungsanlagen gibt, wird nachfolgend das Thema als "Grundwasseraustritte und -fassungen" bezeichnet.
 
 === rechtliche Grundlagen
 Seit dem 1. Juli 2008 ist das Bundesgesetz über Geoinformation (GeoIG, SR 510.62) <<allgemeines.adoc#doc-01,[1]>> in Kraft. Am 1. Juli 2012 erfolgte die vollständige Inkraftsetzung des kantonalen Geoinformationsgesetzes (kGeoiG, SRSZ 214.110) <<allgemeines.adoc#doc-03,[3]>>. Es hat zum Ziel, verbindliche Vorgaben für die Erfassung, Modellierung und den Austausch von Geodaten festzulegen.
