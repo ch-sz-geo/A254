@@ -1,6 +1,6 @@
 == Modellbeschreibung
 
-Die Modellbeschreibung entspricht jener des Bundes. Es wird daher auf die Modelldokumentation des Bundes verwiesen.
+Die Modellbeschreibung entspricht jener des Bundes. Es wird auf die Modelldokumentation des Bundes verwiesen.
 
 ifdef::backend-pdf[]
 <<<
