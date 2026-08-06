@@ -54,29 +54,29 @@ OID des Grundwasserschutzbereichs aufgrund geometrischem Verschnitt mit dem Stan
 |===
 | Quellattribut | Zielattribut
 | zusammengesetzter Wert: +
-A034: "SZ"-`+Grundwasserfassung.Identifikator+`
+A059: "SZ"-`+Grundwasserfassung.Identifikator+`
 | `+Identifikator+`
-| A034: `+Grundwasserfassung.Name+`
+| A059: `+Grundwasserfassung.Name+`
 | `+Name+`
-| A034: `+Grundwasserfassung.Fassungsart+`
+| A059: `+Grundwasserfassung.Fassungsart+`
 | `+Brunnenart+`
-| A034: `+Grundwasserfassung.Foerdermethode+`
+| A059: `+Grundwasserfassung.Foerdermethode+`
 | `+Foerdermethode+`
-| A034: `+Grundwasserfassung.Nutzungszustand+`
+| A059: `+Grundwasserfassung.Nutzungszustand+`
 | `+Nutzungszustand+`
-| A034: `+Grundwasserfassung.Trinkwasser+`
+| A059: `+Grundwasserfassung.Trinkwasser+`
 | `+Trinkwasser+`
 | - - -
 | `+Zweck+`
 | fix: "unbestimmt"
 | `+Oeffentliches_Interesse+`
-| A034: `+Grundwasserfassung.Pkonz+`
+| A059: `+Grundwasserfassung.Pkonz+`
 | `+Pkonz+`
 | - - -
 | `+Pkonz_gruppe+`
 | - - -
 | `+Zustroembereich_erforderlich+`
-| A034: `+Grundwasserfassung.Geometrie+`
+| A059: `+Grundwasserfassung.Geometrie+`
 | `+Geometrie+`
 | - - -
 | `+Name_WV+`
